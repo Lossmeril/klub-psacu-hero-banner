@@ -3,6 +3,7 @@ window.onload = function () {
 
   const handleMove = (e) => {
     left.style.width = `${(e.clientX / window.innerWidth) * 100}%`;
+    left.classList.remove("introAnimation");
   };
 
   document.onmousemove = (e) => handleMove(e);

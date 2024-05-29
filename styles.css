@@ -30,6 +30,11 @@ body {
   width: 80%;
 }
 
+#left-side.introAnimation {
+  animation-name: mouseEffectExample;
+  animation-duration: 5s;
+}
+
 #right-side {
   background-color: var(--primary);
 }
@@ -75,4 +80,13 @@ body {
 #right-side .fancy,
 #right-side .name {
   color: var(--dark);
+}
+
+@keyframes mouseEffectExample {
+  from {
+    width: 20%;
+  }
+  to {
+    width: 80%;
+  }
 }
