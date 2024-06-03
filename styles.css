@@ -11,6 +11,14 @@ body {
   background-color: var(--dark);
   margin: 0;
   font-family: "Montserrat", sans-serif;
+
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.hero-banner {
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .side {
@@ -30,13 +38,38 @@ body {
   width: 80%;
 }
 
-#left-side.introAnimation {
+#left-side.intro-animation {
   animation-name: mouseEffectExample;
   animation-duration: 5s;
 }
 
 #right-side {
   background-color: var(--primary);
+
+  position: relative;
+}
+
+.side::before {
+  background-color: var(--primary);
+
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#right-side::before {
+  background: url("./img/bg-dark.png");
+}
+
+#left-side::before {
+  background: url("./img/bg-pink.png");
 }
 
 .side p {
@@ -57,6 +90,11 @@ body {
   color: #fff;
   text-align: center;
   position: relative;
+}
+
+.side .text img {
+  height: 200px;
+  margin-bottom: 50px;
 }
 
 .side .title {
@@ -88,5 +126,66 @@ body {
   }
   to {
     width: 80%;
+  }
+}
+
+#mobile-drag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+
+  height: 100%;
+  width: 20px;
+  z-index: 50;
+}
+
+#mobile-drag.slider-intro-animation {
+  animation-name: mouseEffectExampleMobileDrag;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+#mobile-drag .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 100%;
+  width: 2px;
+  z-index: 50;
+
+  background-color: #fff;
+}
+
+#mobile-drag .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 40px;
+  width: 40px;
+  border-radius: 999px;
+  z-index: 50;
+
+  background-color: #fff;
+  box-shadow: #1e1e1e;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
+}
+
+@keyframes mouseEffectExampleMobileDrag {
+  from {
+    left: 20%;
+  }
+  to {
+    left: 80%;
   }
 }
