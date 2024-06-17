@@ -1,0 +1,323 @@
+.hero-banner {
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative;
+
+  background-color: var(--e-global-color-astglobalcolor0);
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.side {
+  height: 100vh;
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+  position: absolute;
+}
+
+#left-side {
+  background-color: var(--e-global-color-astglobalcolor0);
+  z-index: 10;
+  width: 80%;
+
+  transition: all 2s ease-in-out;
+}
+
+#left-side.intro-animation {
+  animation-name: wipeIntro;
+  animation-duration: 5s;
+}
+
+#left-side.active {
+  width: 80%;
+}
+
+#left-side.inactive {
+  width: 20%;
+}
+
+#right-side {
+  background-color: var(--e-global-color-astglobalcolor1);
+
+  position: relative;
+}
+
+.side::before {
+  background-color: var(--e-global-color-astglobalcolor1);
+
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#right-side::before {
+  background: url("https://www.klubpsacu.cz/wp-content/uploads/2024/06/bg-pink.png");
+}
+
+#left-side::before {
+  background: url("https://www.klubpsacu.cz/wp-content/uploads/2024/06/bg-dark.png");
+}
+
+.side p {
+  font-size: 2vw;
+  font-weight: 400;
+  margin: 0;
+}
+
+.side .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100%;
+
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.side .text img {
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+.side .title {
+  font-size: 6vw;
+  font-weight: 800;
+  margin: 0;
+}
+
+.side .fancy {
+  font-family: "Mynerve", cursive;
+  font-size: 6vw;
+  font-weight: 800;
+  margin: 0;
+}
+
+#left-side .fancy,
+#left-side .name {
+  color: var(--e-global-color-astglobalcolor1);
+}
+
+#right-side .fancy,
+#right-side .name {
+  color: var(--e-global-color-astglobalcolor0);
+}
+
+#slider {
+  position: absolute;
+  top: 0;
+  left: 80%;
+  transform: translateX(-50%);
+
+  height: 100%;
+  width: 20px;
+  z-index: 50;
+
+  transition: all 2s ease-in-out;
+}
+
+#slider.active {
+  left: 80%;
+}
+
+#slider.inactive {
+  left: 20%;
+}
+
+#slider.slider-intro-animation {
+  animation-name: sliderIntro;
+  animation-duration: 5s;
+}
+
+#slider .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 100%;
+  width: 2px;
+  z-index: 50;
+
+  background-color: #fff;
+}
+
+.switch-button {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(100%);
+
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  background-color: var(--e-global-color-astglobalcolor2);
+
+  cursor: pointer;
+  z-index: 80;
+
+  transition: transform 0.25s ease-in-out, opacity 0.5s ease-in-out 2s;
+}
+
+.switch-button:hover {
+  transform: translate(-50%, -50%) scale(110%);
+  transition: transform 0.25s ease-in-out;
+}
+
+.switch-button.active {
+  opacity: 1;
+}
+
+.switch-button.button-intro-animation {
+  opacity: 0;
+  animation-name: buttonReveal;
+  animation-duration: 0.5s;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+}
+
+.switch-button.inactive {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.switch-button#petr-activator {
+  left: 82%;
+}
+.switch-button#klub-activator {
+  left: 18%;
+}
+
+.switch-button p {
+  font-size: 12pt;
+  line-height: 16pt;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -42%);
+
+  text-align: center;
+}
+
+@keyframes wipeIntro {
+  from {
+    width: 20%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes sliderIntro {
+  from {
+    left: 20%;
+  }
+  to {
+    left: 80%;
+  }
+}
+
+@keyframes buttonReveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-break {
+    display: inline;
+  }
+
+  .side::before {
+    background: none !important;
+  }
+
+  .side p {
+    font-size: 1.5em;
+  }
+
+  .side .title,
+  .side .fancy {
+    font-size: 3em;
+  }
+
+  .fancy {
+    line-height: 1em !important;
+    margin-top: 15px !important;
+  }
+
+  #left-side {
+    width: 90%;
+  }
+
+  #left-side.active {
+    width: 90%;
+  }
+
+  #left-side.inactive {
+    width: 10%;
+  }
+
+  #slider.active {
+    left: 90%;
+  }
+
+  #slider.inactive {
+    left: 10%;
+  }
+
+  .switch-button {
+    top: 25%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .switch-button p {
+    font-size: 10pt;
+    line-height: 12.5pt;
+    transform: translate(-50%, -50%);
+  }
+
+  .switch-button#petr-activator {
+    left: 80%;
+  }
+  .switch-button#klub-activator {
+    left: 20%;
+  }
+
+  @keyframes sliderIntro {
+    from {
+      left: 10%;
+    }
+    to {
+      left: 90%;
+    }
+  }
+
+  @keyframes wipeIntro {
+    from {
+      width: 10%;
+    }
+    to {
+      width: 90%;
+    }
+  }
+}
