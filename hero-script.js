@@ -13,7 +13,7 @@ window.onload = function () {
     left.classList.remove("intro-animation");
     slider.classList.remove("slider-intro-animation");
     petrButton.classList.remove("button-intro-animation");
-  }, 6000);
+  }, 3500);
 
   function switchSides() {
     if (leftActive) {

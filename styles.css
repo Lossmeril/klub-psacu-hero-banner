@@ -8,19 +8,25 @@
 }
 
 body {
-  background-color: var(--e-global-color-astglobalcolor0);
+  background-color: var(--e-global-color-astglobalcolor1);
   margin: 0;
 
   max-width: 100vw;
   overflow: hidden;
 }
 
+.mobile-break {
+  display: none;
+}
+
+/* --- COPY FROM HERE --- */
+
 .hero-banner {
   max-width: 100vw;
   overflow: hidden;
   position: relative;
 
-  background-color: var(--e-global-color-astglobalcolor0);
+  background-color: var(--e-global-color-astglobalcolor1);
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
@@ -37,7 +43,7 @@ body {
 }
 
 #left-side {
-  background-color: var(--e-global-color-astglobalcolor0);
+  background-color: var(--e-global-color-astglobalcolor1);
   z-index: 10;
   width: 80%;
 
@@ -46,7 +52,7 @@ body {
 
 #left-side.intro-animation {
   animation-name: wipeIntro;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 #left-side.active {
@@ -58,13 +64,13 @@ body {
 }
 
 #right-side {
-  background-color: var(--e-global-color-astglobalcolor1);
+  background-color: var(--e-global-color-astglobalcolor0);
 
   position: relative;
 }
 
 .side::before {
-  background-color: var(--e-global-color-astglobalcolor1);
+  background-color: var(--e-global-color-astglobalcolor0);
 
   content: "";
 
@@ -79,15 +85,15 @@ body {
 }
 
 #right-side::before {
-  background: url("./img/bg-pink.png");
-}
-
-#left-side::before {
   background: url("./img/bg-dark.png");
 }
 
+#left-side::before {
+  background: url("./img/bg-pink.png");
+}
+
 .side p {
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: 400;
   margin: 0;
 }
@@ -112,26 +118,62 @@ body {
 }
 
 .side .title {
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 800;
   margin: 0;
 }
 
 .side .fancy {
   font-family: "Mynerve", cursive;
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 800;
   margin: 0;
 }
 
+.hero-button {
+  height: 50px;
+  width: 150px;
+  color: var(--e-global-color-astglobalcolor2);
+  border: 3px solid var(--e-global-color-astglobalcolor2);
+
+  display: grid;
+  place-items: center;
+
+  margin-top: 50px;
+
+  transition: all 0.25s ease-in-out;
+
+  text-decoration: none !important;
+}
+
+#left-side .hero-button {
+  background-color: var(--e-global-color-astglobalcolor0);
+  border-color: var(--e-global-color-astglobalcolor0);
+}
+
+#left-side .hero-button:hover {
+  background-color: transparent;
+  border-color: var(--e-global-color-astglobalcolor2);
+}
+
+#right-side .hero-button {
+  background-color: var(--e-global-color-astglobalcolor1);
+  border-color: var(--e-global-color-astglobalcolor1);
+}
+
+#right-side .hero-button:hover {
+  background-color: transparent;
+  border-color: var(--e-global-color-astglobalcolor2);
+}
+
 #left-side .fancy,
 #left-side .name {
-  color: var(--e-global-color-astglobalcolor1);
+  color: var(--e-global-color-astglobalcolor0);
 }
 
 #right-side .fancy,
 #right-side .name {
-  color: var(--e-global-color-astglobalcolor0);
+  color: var(--e-global-color-astglobalcolor1);
 }
 
 #slider {
@@ -157,7 +199,7 @@ body {
 
 #slider.slider-intro-animation {
   animation-name: sliderIntro;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 #slider .line {
@@ -202,7 +244,7 @@ body {
   opacity: 0;
   animation-name: buttonReveal;
   animation-duration: 0.5s;
-  animation-delay: 5s;
+  animation-delay: 3s;
   animation-fill-mode: both;
 }
 
@@ -220,10 +262,13 @@ body {
 }
 
 .switch-button p {
+  font-size: 12pt;
+  line-height: 16pt;
+  font-weight: bold;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -42%);
 
   text-align: center;
 }

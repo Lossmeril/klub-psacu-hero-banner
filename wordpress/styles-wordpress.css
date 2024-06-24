@@ -1,9 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+strong {
+  color: var(--e-global-color-astglobalcolor0) !important;
+  font-weight: bold;
+}
+
+header {
+  z-index: 75 !important;
+}
+
+.mobile-break {
+  display: none;
+}
+
+.sub-menu a {
+  color: black !important;
+  font-size: smaller !important;
+}
+
+.fancy {
+  font-family: "Mynerve", cursive !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+#page {
+  overflow-x: hidden;
+}
+
+/* --- NOVINKY --- */
+
+.eael-entry-content {
+  margin-bottom: 16px;
+}
+
+.eael-entry-header-after {
+  display: none;
+}
+
+.ninja-forms-req-symbol {
+  color: var(--e-global-color-astglobalcolor0) !important;
+}
+
+/* --- HERO BANNER --- */
+
 .hero-banner {
   max-width: 100vw;
   overflow: hidden;
   position: relative;
 
-  background-color: var(--e-global-color-astglobalcolor0);
+  background-color: var(--e-global-color-astglobalcolor1);
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
@@ -20,7 +74,7 @@
 }
 
 #left-side {
-  background-color: var(--e-global-color-astglobalcolor0);
+  background-color: var(--e-global-color-astglobalcolor1);
   z-index: 10;
   width: 80%;
 
@@ -29,7 +83,7 @@
 
 #left-side.intro-animation {
   animation-name: wipeIntro;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 #left-side.active {
@@ -41,13 +95,13 @@
 }
 
 #right-side {
-  background-color: var(--e-global-color-astglobalcolor1);
+  background-color: var(--e-global-color-astglobalcolor0);
 
   position: relative;
 }
 
 .side::before {
-  background-color: var(--e-global-color-astglobalcolor1);
+  background-color: var(--e-global-color-astglobalcolor0);
 
   content: "";
 
@@ -62,15 +116,15 @@
 }
 
 #right-side::before {
-  background: url("https://www.klubpsacu.cz/wp-content/uploads/2024/06/bg-pink.png");
-}
-
-#left-side::before {
   background: url("https://www.klubpsacu.cz/wp-content/uploads/2024/06/bg-dark.png");
 }
 
+#left-side::before {
+  background: url("https://www.klubpsacu.cz/wp-content/uploads/2024/06/bg-pink.png");
+}
+
 .side p {
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: 400;
   margin: 0;
 }
@@ -95,26 +149,63 @@
 }
 
 .side .title {
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 800;
   margin: 0;
 }
 
 .side .fancy {
   font-family: "Mynerve", cursive;
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 800;
   margin: 0;
 }
 
+.hero-button {
+  height: 50px;
+  width: 200px;
+  color: var(--e-global-color-astglobalcolor2) !important;
+  border: 3px solid var(--e-global-color-astglobalcolor2);
+  font-weight: 600;
+
+  display: grid;
+  place-items: center;
+
+  margin-top: 50px;
+
+  transition: all 0.25s ease-in-out;
+
+  text-decoration: none !important;
+}
+
+#left-side .hero-button {
+  background-color: var(--e-global-color-astglobalcolor0);
+  border-color: var(--e-global-color-astglobalcolor0);
+}
+
+#left-side .hero-button:hover {
+  background-color: transparent;
+  border-color: var(--e-global-color-astglobalcolor2);
+}
+
+#right-side .hero-button {
+  background-color: var(--e-global-color-astglobalcolor1);
+  border-color: var(--e-global-color-astglobalcolor1);
+}
+
+#right-side .hero-button:hover {
+  background-color: transparent;
+  border-color: var(--e-global-color-astglobalcolor2);
+}
+
 #left-side .fancy,
 #left-side .name {
-  color: var(--e-global-color-astglobalcolor1);
+  color: var(--e-global-color-astglobalcolor0);
 }
 
 #right-side .fancy,
 #right-side .name {
-  color: var(--e-global-color-astglobalcolor0);
+  color: var(--e-global-color-astglobalcolor1);
 }
 
 #slider {
@@ -140,7 +231,7 @@
 
 #slider.slider-intro-animation {
   animation-name: sliderIntro;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 #slider .line {
@@ -185,7 +276,7 @@
   opacity: 0;
   animation-name: buttonReveal;
   animation-duration: 0.5s;
-  animation-delay: 5s;
+  animation-delay: 3s;
   animation-fill-mode: both;
 }
 
