@@ -19,11 +19,6 @@ header {
   display: none;
 }
 
-.sub-menu a {
-  color: black !important;
-  font-size: smaller !important;
-}
-
 .fancy {
   font-family: "Mynerve", cursive !important;
 }
@@ -36,6 +31,12 @@ header {
   overflow-x: hidden;
 }
 
+.cartoon-border {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+  border: 3px solid rgba(0, 0, 0);
+  overflow: hidden;
+}
+
 /* --- NOVINKY --- */
 
 .eael-entry-content {
@@ -45,6 +46,21 @@ header {
 .eael-entry-header-after {
   display: none;
 }
+
+.eael-grid-post-holder {
+  overflow: hidden;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+  border: 3px solid rgba(0, 0, 0);
+}
+
+.eael-entry-media {
+  transform: scale(106%);
+  overflow: hidden;
+  border-radius: 225px 15px 225px 220px/15px 225px 15px 21px !important;
+  border: 3px solid rgba(0, 0, 0);
+}
+
+/* --- FORM --- */
 
 .ninja-forms-req-symbol {
   color: var(--e-global-color-astglobalcolor0) !important;
@@ -412,3 +428,5 @@ header {
     }
   }
 }
+
+/* --- LEARNDASH --- */
