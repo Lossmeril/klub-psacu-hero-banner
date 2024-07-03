@@ -60,6 +60,25 @@ header {
   border: 3px solid rgba(0, 0, 0);
 }
 
+/* ZOBRAZOVÁNÍ ČLÁNKŮ */
+
+div.eael-post-grid {
+  position: relative !important;
+  display: flex !important;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+div.eael-post-grid article {
+  position: relative !important;
+  width: 33% !important;
+  z-index: 2;
+  left: 0;
+}
+
 /* --- FORM --- */
 
 .ninja-forms-req-symbol {
