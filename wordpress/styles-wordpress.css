@@ -15,6 +15,10 @@ header {
   z-index: 75 !important;
 }
 
+#page {
+  overflow-x: hidden;
+}
+
 .mobile-break {
   display: none;
 }
@@ -27,14 +31,46 @@ header {
   overflow: hidden;
 }
 
-#page {
-  overflow-x: hidden;
-}
-
 .cartoon-border {
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
   border: 3px solid rgba(0, 0, 0);
   overflow: hidden;
+}
+
+/* --- NAVBAR --- */
+.menu-link {
+  position: relative;
+  padding: 0 !important;
+  margin: 0 20px !important;
+}
+
+.menu-link:after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 0;
+  height: 5px;
+
+  background-color: var(--e-global-color-astglobalcolor0) !important;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.home .menu-link:after {
+  background-color: var(--e-global-color-astglobalcolor2) !important;
+}
+
+.menu-link:hover:after {
+  width: 100%;
+}
+
+ul.sub-menu .menu-link {
+  padding: 20px !important;
+}
+
+ul.sub-menu .menu-link:after {
+  display: none;
 }
 
 /* --- NOVINKY --- */
@@ -59,8 +95,6 @@ header {
   border-radius: 225px 15px 225px 220px/15px 225px 15px 21px !important;
   border: 3px solid rgba(0, 0, 0);
 }
-
-/* ZOBRAZOVÁNÍ ČLÁNKŮ */
 
 div.eael-post-grid {
   position: relative !important;
