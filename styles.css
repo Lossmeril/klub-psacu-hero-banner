@@ -110,11 +110,21 @@ body {
   color: #fff;
   text-align: center;
   position: relative;
+
+  padding-top: 15% !important;
 }
 
-.side .text img {
-  height: 200px;
-  margin-bottom: 50px;
+.side .hanel {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  z-index: 1;
+}
+
+.side .text *:not(img) {
+  z-index: 5;
 }
 
 .side .title {

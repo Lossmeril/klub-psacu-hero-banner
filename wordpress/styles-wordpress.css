@@ -37,6 +37,32 @@ header {
   overflow: hidden;
 }
 
+.book {
+  aspect-ratio: 21/29;
+  overflow: hidden !important;
+}
+
+.wip {
+  opacity: 0.4;
+  pointer-events: none !important;
+}
+
+.wip * {
+  pointer-events: none !important;
+}
+
+.eael-testimonial-image img {
+  aspect-ratio: 1/1;
+  height: 100px !important;
+  width: 100px !important;
+  position: relative;
+}
+
+.clearfix {
+  display: flex !important;
+  flex-direction: column;
+}
+
 /* --- NAVBAR --- */
 .menu-link {
   position: relative;
@@ -71,6 +97,47 @@ ul.sub-menu .menu-link {
 
 ul.sub-menu .menu-link:after {
   display: none;
+}
+
+.elementor-element-86a229d {
+  pointer-events: none !important;
+}
+
+.ast-mobile-popup-inner {
+  background-color: var(--e-global-color-astglobalcolor1) !important;
+}
+
+.ast-mobile-popup-inner .menu-link {
+  margin: 0 !important;
+  padding: 0px !important;
+}
+
+.ast-mobile-popup-inner .sub-menu .menu-link {
+  margin: 0px !important;
+  padding: 0px !important;
+  padding-left: 50px !important;
+  background-color: var(--e-global-color-astglobalcolor2) !important;
+  color: var(--e-global-color-astglobalcolor1) !important;
+}
+
+.ast-mobile-popup-inner .sub-menu .menu-link:hover {
+  margin: 0px !important;
+  padding: 0px !important;
+  padding-left: 50px !important;
+  background-color: var(--e-global-color-astglobalcolor2) !important;
+  color: var(--e-global-color-astglobalcolor0) !important;
+}
+
+.ast-mobile-popup-inner .ast-menu-toggle {
+  color: var(--e-global-color-astglobalcolor2) !important;
+}
+
+.ast-mobile-popup-inner .menu-link:after {
+  content: unset !important;
+}
+
+.home .ast-mobile-svg {
+  fill: var(--e-global-color-astglobalcolor2) !important;
 }
 
 /* --- NOVINKY --- */
@@ -112,6 +179,88 @@ div.eael-post-grid article {
 
   float: unset !important;
   left: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  div.eael-post-grid {
+    flex-direction: column;
+    justify-content: start !important;
+    gap: 20px;
+    height: unset !important;
+  }
+
+  div.eael-post-grid article {
+    position: relative !important;
+    padding: 0 !important;
+    top: unset !important;
+  }
+}
+
+/* --- NOVINKY BLOG --- */
+.eael-timeline-post-inner {
+  border-radius: 225px 15px 225px 220px/15px 225px 15px 21px !important;
+  border: 3px solid rgba(0, 0, 0) !important;
+  overflow: hidden !important;
+
+  background-image: linear-gradient(
+    45deg,
+    var(--e-global-color-astglobalcolor0) 0%,
+    var(--e-global-color-astglobalcolor0) 100%
+  ) !important;
+}
+
+.eael-timeline-bullet {
+  border-radius: 12px 12px 13px 15px !important;
+  border-width: 2px !important;
+  border-color: black !important;
+  background-color: white !important;
+}
+
+/* --- BLOG PŘÍSPĚVEK --- */
+
+.post-template-default .site-primary-header-wrap {
+  padding: 0 !important;
+}
+
+.post-template-default #content {
+  background-color: var(--e-global-color-astglobalcolor0) !important;
+
+  background: url("https://www.klubpsacu.cz/wp-content/uploads/2024/06/bg-dark.png");
+}
+.post-template-default .ast-container {
+  padding: 50px;
+}
+
+.post-template-default #primary {
+  margin-top: 0 !important;
+}
+
+.post-template-default article {
+  padding: 5vw !important;
+}
+
+.post-template-default article .post-thumb-img-content {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.post-template-default article .post-thumb-img-content img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.post-template-default article h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900 !important;
+  font-size: 2em;
+}
+
+.post-template-default article .entry-meta,
+.post-template-default .post-navigation .nav-links {
+  display: none;
 }
 
 /* --- FORM --- */
@@ -211,11 +360,21 @@ div.eael-post-grid article {
   color: #fff;
   text-align: center;
   position: relative;
+
+  padding-top: 15% !important;
 }
 
-.side .text img {
-  height: 200px;
-  margin-bottom: 50px;
+.side .hanel {
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  z-index: 1;
+}
+
+.side .text *:not(img) {
+  z-index: 5;
 }
 
 .side .title {
@@ -233,7 +392,7 @@ div.eael-post-grid article {
 
 .hero-button {
   height: 50px;
-  width: 200px;
+  width: 225px;
   color: var(--e-global-color-astglobalcolor2) !important;
   border: 3px solid var(--e-global-color-astglobalcolor2);
   font-weight: 600;
@@ -403,6 +562,15 @@ div.eael-post-grid article {
 }
 
 @media screen and (max-width: 768px) {
+  .side .text {
+    padding-top: 50% !important;
+  }
+
+  .side .hanel {
+    top: 10%;
+    transform: translate(-50%, 0) scale(105%);
+  }
+
   .mobile-break {
     display: inline;
   }
@@ -484,3 +652,86 @@ div.eael-post-grid article {
 }
 
 /* --- LEARNDASH --- */
+
+.page-id-734 #content,
+.learndash-cpt #content {
+  background-color: var(--e-global-color-astglobalcolor1) !important;
+  border-bottom: solid 1px var(--e-global-color-astglobalcolor2);
+  background: url("https://www.klubpsacu.cz/wp-content/uploads/2024/06/bg-pink.png");
+}
+
+.post-734 h1.entry-title,
+.learndash-cpt h1.entry-title {
+  font-weight: bold;
+  font-size: 20pt;
+  text-align: center;
+}
+
+.post-734 .ld-expand-button,
+.learndash-cpt .ld-expand-button,
+.ld-button,
+.learndash_mark_complete_button {
+  height: 50px;
+  width: 200px;
+  font-weight: 600;
+  transition: all 0.25s ease-in-out;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+}
+
+.ld-status {
+  color: var(--e-global-color-astglobalcolor2) !important;
+}
+
+.ld-item-list-item {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+  border: 3px solid rgba(0, 0, 0) !important;
+  overflow: hidden !important;
+}
+
+.ld-lesson-status,
+.ld-course-status,
+.ld-item-search-wrapper {
+  border-radius: 0 !important;
+  padding: 20px 50px !important;
+}
+
+.ld-breadcrumbs {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.learndash-wrapper .ld-progress {
+  margin: 0 !important;
+}
+
+.post-734 .ld-expand-button,
+.learndash-cpt .ld-expand-button,
+.ld-button {
+  background-color: var(--e-global-color-astglobalcolor0) !important;
+  border-color: var(--e-global-color-astglobalcolor0) !important;
+  color: var(--e-global-color-astglobalcolor2) !important;
+}
+
+.learndash_mark_complete_button {
+  background-color: var(--e-global-color-astglobalcolor1) !important;
+  border-color: var(--e-global-color-astglobalcolor1) !important;
+  color: var(--e-global-color-astglobalcolor2) !important;
+}
+
+.ld-profile-stat-completed {
+  border: 0 !important;
+}
+
+.ld-profile-stat-certificates,
+.ld-profile-stat-points,
+.ld-profile-edit-link,
+#comments,
+.learndash-cpt .entry-meta {
+  display: none;
+}
+
+.ld-profile-summary .ld-profile-card .ld-profile-avatar {
+  border: 5px solid var(--e-global-color-astglobalcolor0) !important;
+}
